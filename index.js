@@ -5,7 +5,7 @@ require("dotenv").config();
 let launchItems = [];
 
 let reader = new FeedSub("https://www.theverge.com/rss/index.xml", {
-  interval: 1,
+  interval: 10,
 });
 
 reader.on("item", async (item) => {
@@ -26,7 +26,14 @@ reader.on("item", async (item) => {
   });
 });
 
-reader.start();
+try {
+  reader.start();
+  console.log(
+    `[${new Date().toUTCString()}] - [Verge RSS] Started RSS reader.`
+  );
+} catch (e) {
+  console.log(`[${new Date().toUTCString()}] - [Verge RSS] ${e}`);
+}
 
 reader.read(async function (err, item) {
   launchItems.push(item.id);
