@@ -5,11 +5,11 @@ const parser = new Parser();
 require("dotenv").config();
 
 var rawArticles;
-if (!fs.existsSync("./articles.json")) {
+if (!fs.existsSync("./data/articles.json")) {
   var rawArticles = JSON.stringify({ data: [] });
-  fs.writeFileSync("./articles.json", rawArticles);
+  fs.writeFileSync("./data/articles.json", rawArticles);
 } else {
-  var rawArticles = fs.readFileSync("./articles.json");
+  var rawArticles = fs.readFileSync("./data/articles.json");
 }
 let checkFromFile = JSON.parse(rawArticles);
 let checkedArticles = [];
@@ -68,7 +68,7 @@ async function checkCallback() {
   newArticlesAmount = 0;
 
   let data = JSON.stringify({ data: checkedArticles });
-  fs.writeFileSync("./articles.json", data);
+  fs.writeFileSync("./data/articles.json", data);
 
   await postArticles();
 }
@@ -92,6 +92,5 @@ async function postArticles() {
       });
     });
     articlesToBePosted = [];
-    newArticlesAmount = 0;
   }
 }
