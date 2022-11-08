@@ -1,0 +1,9 @@
+{
+  "script": "./node.js",
+  "watch": true,
+  "ignore_watch": ["articles.json", "node_modules", ".git"],
+  "watch_options": {
+    "followSymlinks": false
+  },
+  "name": "verge-mastodon-bot"
+}

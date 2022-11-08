@@ -6,7 +6,8 @@
   "author": "Milan Mehra <milan@milanm.org>",
   "license": "Apache License 2.0",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "pull": "git fetch origin && git reset --hard origin/main && yarn install"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
