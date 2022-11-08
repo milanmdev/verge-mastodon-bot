@@ -24,22 +24,16 @@ main().catch((e) => {
   throw e;
 });
 async function main() {
-  const masto = await login({
-    url: "https://wuff.space",
-    accessToken: process.env.ACCESS_TOKEN,
-  }).then((data) => {
-    console.log(
-      `[${new Date().toUTCString()}] - [Mastodon] Logged in to Mastodon`
-    );
+  console.log(
+    `[${new Date().toUTCString()}] - [Mastodon] Logged in to Mastodon`
+  );
 
-    checkForArticles(data);
-    setInterval(function () {
-      checkForArticles();
-    }, 1000 * 60 * 10);
-  });
+  setInterval(function () {
+    checkForArticles();
+  }, 1000 * 60 * 10);
 }
 
-async function checkForArticles(mastodon) {
+async function checkForArticles() {
   let itemsProcessed = 0;
   console.log(
     `[${new Date().toUTCString()}] - [Verge RSS] Checking for new articles...`
@@ -55,11 +49,11 @@ async function checkForArticles(mastodon) {
       checkedArticles.push(item.id);
     }
 
-    if (itemsProcessed === array.length) return checkCallback(mastodon);
+    if (itemsProcessed === array.length) return checkCallback();
   });
 }
 
-async function checkCallback(mastodon) {
+async function checkCallback() {
   console.log(
     `[${new Date().toUTCString()}] - [Verge RSS] Done checking for new articles. Next update will be in 10 minutes.`
   );
@@ -75,18 +69,23 @@ async function checkCallback(mastodon) {
   let data = JSON.stringify({ data: checkedArticles });
   fs.writeFileSync("./articles.json", data);
 
-  await postArticles(mastodon);
+  await postArticles();
 }
 
-async function postArticles(mastodon) {
+async function postArticles() {
   if (articlesToBePosted.length > 0) {
     console.log(
       `[${new Date().toUTCString()}] - [Mastodon] Posting ${
         articlesToBePosted.length
       } new articles...`
     );
+
+    const masto = await login({
+      url: "https://wuff.space",
+      accessToken: process.env.ACCESS_TOKEN,
+    });
     articlesToBePosted.forEach((item) => {
-      mastodon.statuses.create({
+      masto.statuses.create({
         status: `${item.title} - ${item.link}`,
         visibility: "public",
       });
