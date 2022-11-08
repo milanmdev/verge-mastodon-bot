@@ -28,6 +28,7 @@ async function main() {
     `[${new Date().toUTCString()}] - [Mastodon] Logged in to Mastodon`
   );
 
+  checkForArticles();
   setInterval(function () {
     checkForArticles();
   }, 1000 * 60 * 10);
