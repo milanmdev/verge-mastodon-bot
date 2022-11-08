@@ -1,0 +1,16 @@
+{
+  "name": "verge-mastodon-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/milanmdev/verge-mastodon-bot.git",
+  "author": "Milan Mehra <milan@milanm.org>",
+  "license": "Apache License 2.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "masto": "^4.4.1",
+    "rss-parser": "^3.12.0"
+  }
+}
