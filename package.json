@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "https://github.com/milanmdev/verge-mastodon-bot.git",
   "author": "Milan Mehra <milan@milanm.org>",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "scripts": {
     "start": "node index.js",
     "pull": "git fetch origin && git reset --hard origin/main && yarn install"
