@@ -1,5 +1,5 @@
 {
-  "script": "./node.js",
+  "script": "./index.js",
   "watch": true,
   "ignore_watch": ["articles.json", "node_modules", ".git"],
   "watch_options": {
