@@ -51,6 +51,11 @@ change-case@^4.1.2:
     snake-case "^3.0.4"
     tslib "^2.0.3"
 
+clarinet@^0.12.4:
+  version "0.12.5"
+  resolved "https://registry.yarnpkg.com/clarinet/-/clarinet-0.12.5.tgz#7ee9c3984620592e370063022d3d2982fc527228"
+  integrity sha512-4833ySquSUW91fnPaYI94LX3OdnyfwD8/NrMi6a4Kt6EmOsphLWmEzx9bZPqO9+DtQzSv2s3WSYNLsrXt59FKg==
+
 combined-stream@^1.0.6, combined-stream@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
@@ -94,6 +99,24 @@ eventemitter3@^4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
+
+feedme@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/feedme/-/feedme-2.0.2.tgz#f738b6ca434a30c57c23cbf9bdedc7cdb91413a9"
+  integrity sha512-0RNn0uLaSey8EThxgABR0T1Q47kSRatYnAXy1cfUc8/eypqXiAu38XGthuwwzb7mESCD9465k6Nym8D9AtB8HA==
+  dependencies:
+    clarinet "^0.12.4"
+    sax "^1.2.4"
+
+feedsub@^0.7.8:
+  version "0.7.8"
+  resolved "https://registry.yarnpkg.com/feedsub/-/feedsub-0.7.8.tgz#642fc178a955d1972ff83c1fc95871d5817b10e8"
+  integrity sha512-gxq7gpWf2eOJsIgvTKRvb7Gljvh8sufdJe0ewlCFDpviLBFi2YlDnJ2gj+DIQYel4YNjjSAydPV0+f9jHobdpg==
+  dependencies:
+    feedme "^2.0.2"
+    miniget "^4.2.2"
+    newsemitter "^1.0.2"
+    tiny-typed-emitter "^2.0.3"
 
 follow-redirects@^1.15.0:
   version "1.15.2"
@@ -177,6 +200,16 @@ mime-types@^2.1.12:
   dependencies:
     mime-db "1.52.0"
 
+miniget@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/miniget/-/miniget-4.2.2.tgz#db20320f265efdc4c1826a0be431d56753074475"
+  integrity sha512-a7voNL1N5lDMxvTMExOkg+Fq89jM2vY8pAi9ZEWzZtfNmdfP6RXkvUtFnCAXoCv2T9k1v/fUJVaAEuepGcvLYA==
+
+newsemitter@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/newsemitter/-/newsemitter-1.0.2.tgz#2886723dec5842ca635269534b3a5c20a625f4d0"
+  integrity sha512-N9jDBdccPetXfeM5/VkUYZewdVLQ3FzcjCuMqkJCze3tDEViP9cba0aK0oHl19Jj7GkfNxsEtntRhIzgAJ8HiA==
+
 no-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-3.0.4.tgz#d361fd5c9800f558551a8369fc0dcd4662b6124d"
@@ -222,7 +255,7 @@ rss-parser@^3.12.0:
     entities "^2.0.3"
     xml2js "^0.4.19"
 
-sax@>=0.6.0:
+sax@>=0.6.0, sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
@@ -250,6 +283,11 @@ snake-case@^3.0.4:
   dependencies:
     dot-case "^3.0.4"
     tslib "^2.0.3"
+
+tiny-typed-emitter@^2.0.3:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tiny-typed-emitter/-/tiny-typed-emitter-2.1.0.tgz#b3b027fdd389ff81a152c8e847ee2f5be9fad7b5"
+  integrity sha512-qVtvMxeXbVej0cQWKqVSSAHmKZEHAvxdF8HEUBFWts8h+xEo5m/lEiPakuyZ3BnCBjOD8i24kzNOiOLLgsSxhA==
 
 tslib@^2.0.3:
   version "2.4.1"
