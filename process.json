@@ -1,7 +1,7 @@
 {
   "script": "./index.js",
   "watch": true,
-  "ignore_watch": ["data/articles.json", "node_modules", ".git"],
+  "ignore_watch": ["node_modules", ".git"],
   "watch_options": {
     "followSymlinks": false
   },
