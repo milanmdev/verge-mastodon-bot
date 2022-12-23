@@ -7,7 +7,7 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
-axios@^1.1.3:
+axios@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.1.3.tgz#8274250dada2edf53814ed7db644b9c2866c1e35"
   integrity sha512-00tXVRwKx/FZr/IDVFt4C+f9FYairX517WoGCL6dpOntqLkZofjhu43F/Xl44UOpqa+9sLFDrG/XAnFsUYgkDA==
@@ -90,10 +90,10 @@ dotenv@^16.0.3:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.3.tgz#115aec42bac5053db3c456db30cc243a5a836a07"
   integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
 
-eventemitter3@^4.0.7:
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
-  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
+eventemitter3@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-5.0.0.tgz#084eb7f5b5388df1451e63f4c2aafd71b217ccb3"
+  integrity sha512-riuVbElZZNXLeLEoprfNYoDSwTBRR44X3mnhdI1YcnENpWTCsTTVZ2zFuqQcpoyqPQIUXdiPEU0ECAq0KQRaHg==
 
 feedme@^2.0.2:
   version "2.0.2"
@@ -171,13 +171,13 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 masto@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/masto/-/masto-4.4.1.tgz#17befe321c1458cb0e1babfea47b1b0582c5a9d0"
-  integrity sha512-rR9lYJyuBSQhOM4K1cHH8CBsOjOeiTikR14WCNmGXCt4AfThNqQ/XUck3He4lURXmKNOy6d/d7ek0hzOjGGiaA==
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/masto/-/masto-4.11.1.tgz#54ebb2adee39905a649b39e24dc6b3fc081f35ad"
+  integrity sha512-siTQNhfLV1JjOERCGgjagMvD6q0K0hLuhOXrbXNcYzHAwpbPeSeAM6CSpIRrZ8zFDepOR62Djs/GtJdTR21Rfw==
   dependencies:
-    axios "^1.1.3"
+    axios "1.1.3"
     change-case "^4.1.2"
-    eventemitter3 "^4.0.7"
+    eventemitter3 "^5.0.0"
     isomorphic-form-data "^2.0.0"
     isomorphic-ws "^5.0.0"
     semver "^7.3.7"
