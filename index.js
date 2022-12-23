@@ -20,7 +20,8 @@ reader.on("item", async (item) => {
     url: "https://wuff.space",
     accessToken: process.env.ACCESS_TOKEN,
   });
-  masto.v1.statuses.create({
+
+  await masto.v1.statuses.create({
     status: `${item.title} - ${item.link.href}`,
     visibility: "public",
   });
