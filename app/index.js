@@ -4,9 +4,17 @@ require("dotenv").config();
 
 if (!process.env.ACCESS_TOKEN) throw new Error("No access token provided.");
 
+let fetch_url;
+if (!process.env.FETCH_URL)
+  fetch_url = "https://www.theverge.com/rss/index.xml";
+else fetch_url = process.env.FETCH_URL;
+let fetch_interval;
+if (!process.env.FETCH_INTERVAL) fetch_interval = 10;
+else fetch_interval = process.env.FETCH_INTERVAL;
+
 let launchItems = [];
-let reader = new FeedSub("https://www.theverge.com/rss/index.xml", {
-  interval: 10,
+let reader = new FeedSub(fetch_url, {
+  interval: fetch_interval,
 });
 
 reader.on("item", async (item) => {
@@ -31,7 +39,7 @@ reader.on("item", async (item) => {
 try {
   reader.start();
   console.log(
-    `[${new Date().toUTCString()}] - [Verge RSS] Started RSS reader.`
+    `[${new Date().toUTCString()}] - [Verge RSS] Started RSS reader. Fetching from ${fetch_url}`
   );
 } catch (e) {
   console.log(`[${new Date().toUTCString()}] - [Verge RSS] ${e}`);
