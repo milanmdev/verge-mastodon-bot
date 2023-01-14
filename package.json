@@ -8,7 +8,7 @@
   "scripts": {
     "push": "docker push ghcr.io/milanmdev/verge-mastodon-bot:latest",
     "build:dev": "docker rmi -f verge-mastodon-bot && docker build . -t verge-mastodon-bot",
-    "build:prod": "docker rmi -f ghcr.io/milanmdev/verge-mastodon-bot && docker build . -t ghcr.io/milanmdev/verge-mastodon-bot",
+    "build:prod": "docker rmi -f ghcr.io/milanmdev/verge-mastodon-bot && docker build . --platform linux/x86_64 -t ghcr.io/milanmdev/verge-mastodon-bot",
     "release": "yarn build:prod && yarn push",
     "start": "node ./app/index.js"
   },
