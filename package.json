@@ -6,9 +6,9 @@
   "author": "Milan Mehra <milan@milanm.org>",
   "license": "Apache-2.0",
   "scripts": {
+    "push": "docker push ghcr.io/milanmdev/verge-mastodon-bot:latest",
     "build": "docker build . -t verge-mastodon-bot",
-    "start": "node ./app/index.js",
-    "pull": "git fetch origin && git reset --hard origin/main && yarn install"
+    "start": "node ./app/index.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
