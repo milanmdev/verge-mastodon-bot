@@ -6,6 +6,7 @@
   "author": "Milan Mehra <milan@milanm.org>",
   "license": "Apache-2.0",
   "scripts": {
+    "build": "docker build . -t verge-mastodon-bot",
     "start": "node index.js",
     "pull": "git fetch origin && git reset --hard origin/main && yarn install"
   },
