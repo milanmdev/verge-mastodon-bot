@@ -2,8 +2,9 @@ const FeedSub = require("feedsub");
 const { login } = require("masto");
 require("dotenv").config();
 
-let launchItems = [];
+if (!process.env.ACCESS_TOKEN) throw new Error("No access token provided.");
 
+let launchItems = [];
 let reader = new FeedSub("https://www.theverge.com/rss/index.xml", {
   interval: 10,
 });

@@ -2,7 +2,7 @@ version: '3'
 services:
   verge_mastodon_bot:
     restart: always
-    image: verge-mastodon-bot
+    image: ghcr.io/milanmdev/verge-mastodon-bot
     environment:
       - ACCESS_TOKEN=token
       - NODE_ENV=production
