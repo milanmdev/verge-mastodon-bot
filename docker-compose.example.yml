@@ -5,4 +5,7 @@ services:
     image: ghcr.io/milanmdev/verge-mastodon-bot
     environment:
       - ACCESS_TOKEN=token
+      - INSTANCE_URL=https://your-instance.url
+      - FETCH_URL=https://www.theverge.com/rss/index.xml
+      - FETCH_INTERVAL=5
       - NODE_ENV=production
