@@ -1,5 +1,5 @@
 # verge-mastodon-bot
-A Mastodon bot to post a feed of articles from The Verge - [@verge@wuff.space](https://wuff.space/@verge)
+A Mastodon bot to post a feed of articles from The Verge - [@verge@mastodon.social](https://mastodon.social/@verge)
 
 # Setup
 ## Docker
