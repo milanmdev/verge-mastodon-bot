@@ -10,7 +10,7 @@ if (!process.env.FETCH_URL)
   fetch_url = "https://www.theverge.com/rss/index.xml";
 else fetch_url = process.env.FETCH_URL;
 let instance_url;
-if (!process.env.INSTANCE_URL) instance_url = "https://wuff.space";
+if (!process.env.INSTANCE_URL) instance_url = "https://mastodon.social";
 else instance_url = process.env.INSTANCE_URL;
 let fetch_interval;
 if (!process.env.FETCH_INTERVAL) fetch_interval = 5;
