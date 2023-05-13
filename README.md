@@ -18,9 +18,12 @@ git clone github.com/milanmdev/verge-mastodon-bot
 yarn install
 ```
 3. Create a `.env` file in the root directory of the project and add the following environment variables:
-```bash
-ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+```env
+ACCESS_TOKEN=token
 INSTANCE_URL=https://your-instance.url
+FETCH_URL=https://www.theverge.com/rss/index.xml
+FETCH_INTERVAL=5
+NODE_ENV=production
 ```
 4. Run the bot
 ```bash
