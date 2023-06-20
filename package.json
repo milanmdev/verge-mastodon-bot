@@ -1,6 +1,6 @@
 {
   "name": "verge-mastodon-bot",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "main": "index.js",
   "repository": "https://github.com/milanmdev/verge-mastodon-bot.git",
   "author": "Milan Mehra <milan@milanm.org>",
