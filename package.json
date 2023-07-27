@@ -15,6 +15,6 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "feedsub": "^0.7.8",
-    "masto": "^5.11.3"
+    "masto": "^6.0.0"
   }
 }
