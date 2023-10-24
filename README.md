@@ -1,5 +1,7 @@
 # verge-mastodon-bot
 A Mastodon bot to post a feed of articles from The Verge - [@the_verge@mastodon.social](https://mastodon.social/@the_verge)
+### NOTE: The Verge has started their own official Mastodon, located at [@verge@mastodon.social](https://mastodon.social/@verge). All followers of the account linked above (`@the_verge`) are now following the new account, courtesy of the Mastodon team. 
+### This project is archived as of October 24th, 2023.
 
 # Setup
 ## Docker
